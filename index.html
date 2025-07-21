@@ -1448,6 +1448,49 @@
             });
         }
     </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const orderButtons = document.querySelectorAll('.offer-card .btn.secondary');
+
+        orderButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); // يمنع السلوك الافتراضي للرابط
+                const offerName = button.getAttribute('data-offer-name');
+                const offerDetails = button.getAttribute('data-offer-details');
+                const offerPrice = button.getAttribute('data-offer-price');
+
+                const message = encodeURIComponent(`أهلاً، حابب أطلب عرض: ${offerName} - ${offerDetails} - السعر: ${offerPrice}`);
+                const phoneNumber = '201556331740'; // رقم الواتساب (بدون + أو 0 زيادة)
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+                window.open(whatsappUrl, '_blank'); // يفتح واتساب في نافذة جديدة
+            });
+        });
+
+        // كود التصفية للمنيو (زي ما كان موجود)
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                menuItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>
 
