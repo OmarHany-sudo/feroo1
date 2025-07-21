@@ -1450,47 +1450,58 @@
     </script>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const orderButtons = document.querySelectorAll('.offer-card .btn.secondary');
+  document.addEventListener('DOMContentLoaded', () => {
+    // === واتساب ===
+    const orderButtons = document.querySelectorAll('.offer-card .btn.secondary');
 
-        orderButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault(); // يمنع السلوك الافتراضي للرابط
-                const offerName = button.getAttribute('data-offer-name');
-                const offerDetails = button.getAttribute('data-offer-details');
-                const offerPrice = button.getAttribute('data-offer-price');
+    orderButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault(); // يمنع الانتقال التلقائي
 
-                const message = encodeURIComponent(`أهلاً، حابب أطلب عرض: ${offerName} - ${offerDetails} - السعر: ${offerPrice}`);
-                const phoneNumber = '201556331740'; // رقم الواتساب (بدون + أو 0 زيادة)
-                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        const offerName = button.getAttribute('data-offer-name');
+        const offerDetails = button.getAttribute('data-offer-details');
+        const offerPrice = button.getAttribute('data-offer-price');
 
-                window.open(whatsappUrl, '_blank'); // يفتح واتساب في نافذة جديدة
-            });
-        });
+        const message = encodeURIComponent(`أهلاً، حابب أطلب عرض: ${offerName} - ${offerDetails} - السعر: ${offerPrice}`);
+        const phoneNumber = '201556331740'; // ← رقم الواتساب بدون "+" أو "0"
 
-        // كود التصفية للمنيو (زي ما كان موجود)
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const menuItems = document.querySelectorAll('.menu-item');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const filter = button.getAttribute('data-filter');
-
-                menuItems.forEach(item => {
-                    const category = item.getAttribute('data-category');
-                    if (filter === 'all' || category === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank'); // فتح في نافذة جديدة
+      });
     });
+
+    // === التاريخ الديناميكي للعروض ===
+    const offerCards = document.querySelectorAll('.offer-card');
+
+    offerCards.forEach(card => {
+      const expiryElement = card.querySelector('.expiry');
+      if (!expiryElement) return;
+
+      // تاريخ انتهاء العرض ← غيره لو عايز
+      const expiryDate = new Date("2025-07-31");
+      const today = new Date();
+
+      // نحسب الفرق
+      const diffTime = expiryDate - today;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      let message = "";
+      if (diffDays > 1) {
+        message = `Expires in ${diffDays} days`;
+      } else if (diffDays === 1) {
+        message = "Expires tomorrow";
+      } else if (diffDays === 0) {
+        message = "Expires today";
+      } else {
+        message = "Expired";
+        card.classList.add("expired-offer"); // لو عايز تضيف تأثير بصري للعروض المنتهية
+      }
+
+      expiryElement.textContent = message;
+    });
+  });
 </script>
+
 </body>
 </html>
 
