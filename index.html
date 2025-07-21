@@ -1475,23 +1475,23 @@
         window.open(whatsappUrl, '_blank'); // فتح في نافذة جديدة
       });
     });
+</script>
 
-    // === التاريخ الديناميكي للعروض ===
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
     const offerCards = document.querySelectorAll('.offer-card');
 
     offerCards.forEach(card => {
-      const expiryElement = card.querySelector('.expiry');
-      if (!expiryElement) return;
+      const expiryAttr = card.getAttribute('data-expiry');
+      if (!expiryAttr) return;
 
-      // تاريخ انتهاء العرض ← غيره لو عايز
-      const expiryDate = new Date("2025-07-31");
+      const expiryDate = new Date(expiryAttr);
       const today = new Date();
-
-      // نحسب الفرق
       const diffTime = expiryDate - today;
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
       let message = "";
+
       if (diffDays > 1) {
         message = `Expires in ${diffDays} days`;
       } else if (diffDays === 1) {
@@ -1500,10 +1500,10 @@
         message = "Expires today";
       } else {
         message = "Expired";
-        card.classList.add("expired-offer"); // لو عايز تضيف تأثير بصري للعروض المنتهية
       }
 
-      expiryElement.textContent = message;
+      const expiryP = card.querySelector('.expiry');
+      if (expiryP) expiryP.textContent = message;
     });
   });
 </script>
