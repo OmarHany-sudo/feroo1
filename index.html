@@ -254,70 +254,82 @@
     </section>
 
     <!-- Offers Section -->
-<<section id="offers" class="py-16 relative hero-bg text-center">
-  <div class="floating-elements"></div>
-  <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-gradient mb-10 animate-float">🎌 Special Offers 🎌</h2>
+    <section id="offers" class="py-16 relative hero-bg text-center">
+        <div class="floating-elements"></div>
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gradient mb-10 animate-float">🎌 Special Offers 🎌</h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Combo 20 -->
-      <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-07-31">
-        <h3 class="text-xl font-semibold mb-2">🍣 Combo 20 Pieces</h3>
-        <p><s>320 EGP</s> <span class="text-sushi-gold font-bold">260 EGP</span></p>
-        <p>Includes: 3 Sauces + 1 Stick</p>
-        <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
-        <a href="https://wa.me/201234567890?text=Hi%20I%20want%20Combo%2020%20for%20260EGP" class="btn-glow inline-block mt-4 text-sushi-gold underline">Order This Deal</a>
-      </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Combo 20 -->
+                <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-07-31">
+                    <h3 class="text-xl font-semibold mb-2">🍣 Combo 20 Pieces</h3>
+                    <p><s>320 EGP</s> <span class="text-sushi-gold font-bold">260 EGP</span></p>
+                    <p>Includes: 3 Sauces + 1 Stick</p>
+                    <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
+                    <button onclick="orderOffer('Combo 20 Pieces', '260 EGP', '3 Sauces + 1 Stick')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                        <span>📱</span> Order This Deal
+                    </button>
+                </div>
 
-      <!-- Combo 32 -->
-      <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-02">
-        <h3 class="text-xl font-semibold mb-2">🍣 Combo 32 Pieces</h3>
-        <p><s>460 EGP</s> <span class="text-sushi-gold font-bold">400 EGP</span></p>
-        <p>Includes: 4 Sauces + 2 Sticks</p>
-        <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
-        <a href="https://wa.me/201234567890?text=Hi%20I%20want%20Combo%2032%20for%20400EGP" class="btn-glow inline-block mt-4 text-sushi-gold underline">Order This Deal</a>
-      </div>
+                <!-- Combo 32 -->
+                <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-02">
+                    <h3 class="text-xl font-semibold mb-2">🍣 Combo 32 Pieces</h3>
+                    <p><s>460 EGP</s> <span class="text-sushi-gold font-bold">400 EGP</span></p>
+                    <p>Includes: 4 Sauces + 2 Sticks</p>
+                    <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
+                    <button onclick="orderOffer('Combo 32 Pieces', '400 EGP', '4 Sauces + 2 Sticks')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                        <span>📱</span> Order This Deal
+                    </button>
+                </div>
 
-      <!-- Combo 40 -->
-      <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-04">
-        <h3 class="text-xl font-semibold mb-2">🍣 Combo 40 Pieces</h3>
-        <p><s>560 EGP</s> <span class="text-sushi-gold font-bold">480 EGP</span></p>
-        <p>Includes: 4 Sauces + 2 Sticks</p>
-        <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
-        <a href="https://wa.me/201234567890?text=Hi%20I%20want%20Combo%2040%20for%20480EGP" class="btn-glow inline-block mt-4 text-sushi-gold underline">Order This Deal</a>
-      </div>
+                <!-- Combo 40 -->
+                <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-04">
+                    <h3 class="text-xl font-semibold mb-2">🍣 Combo 40 Pieces</h3>
+                    <p><s>560 EGP</s> <span class="text-sushi-gold font-bold">480 EGP</span></p>
+                    <p>Includes: 4 Sauces + 2 Sticks</p>
+                    <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
+                    <button onclick="orderOffer('Combo 40 Pieces', '480 EGP', '4 Sauces + 2 Sticks')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                        <span>📱</span> Order This Deal
+                    </button>
+                </div>
 
-      <!-- Combo 50 -->
-      <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-06">
-        <h3 class="text-xl font-semibold mb-2">🍣 Combo 50 Pieces</h3>
-        <p><s>740 EGP</s> <span class="text-sushi-gold font-bold">630 EGP</span></p>
-        <p>Includes: 5 Sauces + 2 Sticks</p>
-        <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
-        <a href="https://wa.me/201234567890?text=Hi%20I%20want%20Combo%2050%20for%20630EGP" class="btn-glow inline-block mt-4 text-sushi-gold underline">Order This Deal</a>
-      </div>
+                <!-- Combo 50 -->
+                <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-06">
+                    <h3 class="text-xl font-semibold mb-2">🍣 Combo 50 Pieces</h3>
+                    <p><s>740 EGP</s> <span class="text-sushi-gold font-bold">630 EGP</span></p>
+                    <p>Includes: 5 Sauces + 2 Sticks</p>
+                    <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
+                    <button onclick="orderOffer('Combo 50 Pieces', '630 EGP', '5 Sauces + 2 Sticks')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                        <span>📱</span> Order This Deal
+                    </button>
+                </div>
 
-      <!-- Combo 60 -->
-      <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-08">
-        <h3 class="text-xl font-semibold mb-2">🍣 Combo 60 Pieces</h3>
-        <p><s>880 EGP</s> <span class="text-sushi-gold font-bold">760 EGP</span></p>
-        <p>Includes: 5 Sauces + 3 Sticks</p>
-        <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
-        <a href="https://wa.me/201234567890?text=Hi%20I%20want%20Combo%2060%20for%20760EGP" class="btn-glow inline-block mt-4 text-sushi-gold underline">Order This Deal</a>
-      </div>
+                <!-- Combo 60 -->
+                <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-08">
+                    <h3 class="text-xl font-semibold mb-2">🍣 Combo 60 Pieces</h3>
+                    <p><s>880 EGP</s> <span class="text-sushi-gold font-bold">760 EGP</span></p>
+                    <p>Includes: 5 Sauces + 3 Sticks</p>
+                    <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
+                    <button onclick="orderOffer('Combo 60 Pieces', '760 EGP', '5 Sauces + 3 Sticks')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                        <span>📱</span> Order This Deal
+                    </button>
+                </div>
 
-      <!-- Combo 80 -->
-      <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-10">
-        <h3 class="text-xl font-semibold mb-2">🍣 Combo 80 Pieces</h3>
-        <p><s>1100 EGP</s> <span class="text-sushi-gold font-bold">950 EGP</span></p>
-        <p>Includes: 6 Sauces + 4 Sticks</p>
-        <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
-        <a href="https://wa.me/201234567890?text=Hi%20I%20want%20Combo%2080%20for%20950EGP" class="btn-glow inline-block mt-4 text-sushi-gold underline">Order This Deal</a>
-      </div>
+                <!-- Combo 80 -->
+                <div class="menu-card glass-effect rounded-xl p-6 text-left offer-card animate-float" data-expiry="2025-08-10">
+                    <h3 class="text-xl font-semibold mb-2">🍣 Combo 80 Pieces</h3>
+                    <p><s>1100 EGP</s> <span class="text-sushi-gold font-bold">950 EGP</span></p>
+                    <p>Includes: 6 Sauces + 4 Sticks</p>
+                    <p class="expiry text-sm mt-2 text-yellow-400">Expires in ...</p>
+                    <button onclick="orderOffer('Combo 80 Pieces', '950 EGP', '6 Sauces + 4 Sticks')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 mt-4 flex items-center justify-center gap-2">
+                        <span>📱</span> Order This Deal
+                    </button>
+                </div>
 
-    </div>
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
     <!-- Menu Section -->
     <section id="menu" class="py-20 bg-gradient-to-b from-sushi-gray to-sushi-black relative pt-32">
@@ -361,8 +373,8 @@
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-2xl font-bold text-sushi-gold">95 EGP</span>
                     </div>
-                    <button class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                        Order Now
+                    <button onclick="orderMenuItem('California Roll', '95 EGP')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        اطلب الآن
                     </button>
                 </div>
         
@@ -378,8 +390,8 @@
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-2xl font-bold text-sushi-gold">95 EGP</span>
                     </div>
-                    <button class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                        Order Now
+                    <button onclick="orderMenuItem('Crazy Roll', '95 EGP')" class="btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        اطلب الآن
                     </button>
                 </div>
         
@@ -1425,6 +1437,41 @@
     <script src="assets/js/menu_loader.js"></script>
     <script src="assets/js/update_gallery.js"></script>
     <script>
+        // دالة لطلب العروض عبر واتساب
+        function orderOffer(offerName, price, details) {
+            const message = encodeURIComponent(`أهلاً، أريد طلب العرض: ${offerName} - السعر: ${price} - التفاصيل: ${details}`);
+            const phoneNumber = '201556331740';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // دالة لطلب أصناف المنيو عبر واتساب
+        function orderMenuItem(itemName, price) {
+            const message = encodeURIComponent(`أهلاً، أريد طلب: ${itemName} - السعر: ${price}`);
+            const phoneNumber = '201556331740';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // تعديل جميع أزرار المنيو عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تعديل أزرار المنيو
+            const menuButtons = document.querySelectorAll('.menu-item button');
+            menuButtons.forEach(button => {
+                if (button.textContent.trim() === 'Order Now') {
+                    const menuCard = button.closest('.menu-item');
+                    const itemName = menuCard.querySelector('h3').textContent.trim();
+                    const price = menuCard.querySelector('.text-2xl').textContent.trim();
+                    
+                    button.innerHTML = '<span>📱</span> اطلب الآن';
+                    button.className = 'btn-glow w-full bg-gradient-to-r from-sushi-red to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2';
+                    button.onclick = function() {
+                        orderMenuItem(itemName, price);
+                    };
+                }
+            });
+        });
+
         AOS.init({
             duration: 1000,
             once: true
@@ -1456,57 +1503,36 @@
     </script>
 
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // === واتساب ===
-    const orderButtons = document.querySelectorAll('.offer-card .btn.secondary');
+        // تحديث تواريخ انتهاء العروض
+        document.addEventListener('DOMContentLoaded', () => {
+            const offerCards = document.querySelectorAll('.offer-card');
 
-    orderButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault(); // يمنع الانتقال التلقائي
+            offerCards.forEach(card => {
+                const expiryAttr = card.getAttribute('data-expiry');
+                if (!expiryAttr) return;
 
-        const offerName = button.getAttribute('data-offer-name');
-        const offerDetails = button.getAttribute('data-offer-details');
-        const offerPrice = button.getAttribute('data-offer-price');
+                const expiryDate = new Date(expiryAttr);
+                const today = new Date();
+                const diffTime = expiryDate - today;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-        const message = encodeURIComponent(`أهلاً، حابب أطلب عرض: ${offerName} - ${offerDetails} - السعر: ${offerPrice}`);
-        const phoneNumber = '201556331740'; // ← رقم الواتساب بدون "+" أو "0"
+                let message = "";
 
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-        window.open(whatsappUrl, '_blank'); // فتح في نافذة جديدة
-      });
-    });
-</script>
+                if (diffDays > 1) {
+                    message = `Expires in ${diffDays} days`;
+                } else if (diffDays === 1) {
+                    message = "Expires tomorrow";
+                } else if (diffDays === 0) {
+                    message = "Expires today";
+                } else {
+                    message = "Expired";
+                }
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const offerCards = document.querySelectorAll('.offer-card');
-
-    offerCards.forEach(card => {
-      const expiryAttr = card.getAttribute('data-expiry');
-      if (!expiryAttr) return;
-
-      const expiryDate = new Date(expiryAttr);
-      const today = new Date();
-      const diffTime = expiryDate - today;
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-      let message = "";
-
-      if (diffDays > 1) {
-        message = `Expires in ${diffDays} days`;
-      } else if (diffDays === 1) {
-        message = "Expires tomorrow";
-      } else if (diffDays === 0) {
-        message = "Expires today";
-      } else {
-        message = "Expired";
-      }
-
-      const expiryP = card.querySelector('.expiry');
-      if (expiryP) expiryP.textContent = message;
-    });
-  });
-</script>
+                const expiryP = card.querySelector('.expiry');
+                if (expiryP) expiryP.textContent = message;
+            });
+        });
+    </script>
 
 </body>
 </html>
